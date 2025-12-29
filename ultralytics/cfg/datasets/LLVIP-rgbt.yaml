@@ -11,7 +11,7 @@
 
 
 # new version
-path: E:/BaiduNetdiskDownload/RGBTO/LLVIP
+path: /home/24021211734/jhspoolers/datasets/LLVIP
 train: visible/train
 val: visible/test
 

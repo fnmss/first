@@ -3,7 +3,7 @@ warnings.filterwarnings('ignore')
 from ultralytics import YOLO
 
 if __name__ == '__main__':
-    model = YOLO(R'LLVIP/LLVIP-yolov8-RGBT-midfusion/weights/best.pt')
+    model = YOLO(R'/home/24021211734/jhspoolers/YOLOv11-RGBT/runs/LLVIP/LLVIP-yolo11n-RGBT-midfusion-6/weights/best.pt')
     model.val(data=r'ultralytics/cfg/datasets/LLVIP.yaml',
               split='val',
               imgsz=640,

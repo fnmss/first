@@ -1,0 +1,161 @@
+
+Sender: Unischeduler System <24021211734@login01>
+Subject: Job 1118400: <source /apps/software/anaconda3/etc/profile.d/conda.sh && conda activate YOLO && module load cuda/11.8 && export CUDA_VISIBLE_DEVICES=0 && echo CUDA_VISIBLE_DEVICES:  && python train_RGBT.py> Exited
+
+Job <source /apps/software/anaconda3/etc/profile.d/conda.sh && conda activate YOLO && module load cuda/11.8 && export CUDA_VISIBLE_DEVICES=0 && echo CUDA_VISIBLE_DEVICES:  && python train_RGBT.py> was submitted from host <login01> by user <24021211734>.
+Job was executed on host(s) <1*gpu19>, in queue <gpu>, as user <24021211734>.
+</home/24021211734> was used as the home directory.
+</apps/jhinno/JHdata/spooler/24021211734/YOLOv11-RGBT> was used as the working directory.
+Started at 2025-11-02 19:50:24
+Results reported at 2025-11-02 20:38:40
+
+Your job looked like:
+
+------------------------------------------------------------
+# User input
+source /apps/software/anaconda3/etc/profile.d/conda.sh && conda activate YOLO && module load cuda/11.8 && export CUDA_VISIBLE_DEVICES=0 && echo CUDA_VISIBLE_DEVICES:  && python train_RGBT.py
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time   :         5415.37 sec.
+    Max Memory :             14028 MB
+    Max Processes  :               8
+
+
+The output (if any) follows:
+
+CUDA_VISIBLE_DEVICES:
+WARNING ⚠️ YOLOv9 `Silence` module is deprecated in favor of torch.nn.Identity. Please delete local *.pt file and re-download the latest model checkpoint.
+Ultralytics 8.3.75 🚀 Python-3.8.20 torch-2.2.0+cu118 CUDA:0 (NVIDIA GeForce RTX 2080 Ti, 11019MiB)
+[34m[1mengine/trainer: [0mtask=detect, mode=train, model=ultralytics/cfg/models/11-RGBT/yolo11n-RGBT-midfusion.yaml, data=ultralytics/cfg/datasets/LLVIP.yaml, epochs=300, time=None, patience=100, batch=16, imgsz=640, save=True, save_period=-1, cache=False, device=0, workers=2, project=runs/LLVIP, name=LLVIP-yolo11n-RGBT-midfusion-5, exist_ok=False, pretrained=True, optimizer=SGD, verbose=True, seed=0, deterministic=True, single_cls=False, rect=False, cos_lr=False, close_mosaic=10, resume=, amp=False, fraction=0.2, profile=False, freeze=None, multi_scale=False, overlap_mask=True, mask_ratio=4, dropout=0.0, val=True, split=val, save_json=False, save_hybrid=False, conf=None, iou=0.7, max_det=300, half=False, dnn=False, plots=True, source=None, vid_stride=1, stream_buffer=False, visualize=False, augment=False, agnostic_nms=False, classes=None, retina_masks=False, embed=None, show=False, save_frames=False, save_txt=False, save_conf=False, save_crop=False, show_labels=True, show_conf=True, show_boxes=True, line_width=None, format=torchscript, keras=False, optimize=False, int8=False, dynamic=False, simplify=True, opset=None, workspace=None, nms=False, lr0=0.002, lrf=0.01, momentum=0.937, weight_decay=0.0005, warmup_epochs=3.0, warmup_momentum=0.8, warmup_bias_lr=0.1, box=7.5, cls=0.5, dfl=1.5, pose=12.0, kobj=1.0, nbs=64, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, degrees=0.0, translate=0.1, scale=0.5, shear=0.0, perspective=0.0, flipud=0.0, fliplr=0.5, bgr=0.0, mosaic=1.0, mixup=0.0, copy_paste=0.0, copy_paste_mode=flip, auto_augment=randaugment, erasing=0.4, crop_fraction=1.0, cfg=None, tracker=botsort.yaml, channels=4, use_simotm=RGBT, brightness=0.2, pairs_rgb_ir=['visible', 'infrared'], save_dir=runs/LLVIP/LLVIP-yolo11n-RGBT-midfusion-5
+Overriding model.yaml nc=80 with nc=1
+
+                   from  n    params  module                                       arguments                     
+  0                  -1  1         0  torch.nn.modules.linear.Identity             []                            
+  1                   0  1         0  ultralytics.nn.modules.conv.SilenceChannel   [0, 3]                        
+  2                  -1  1       464  ultralytics.nn.modules.conv.Conv             [3, 16, 3, 2]                 
+  3                  -1  1      4672  ultralytics.nn.modules.conv.Conv             [16, 32, 3, 2]                
+  4                  -1  1      6640  ultralytics.nn.modules.block.C3k2            [32, 64, 1, False, 0.25]      
+  5                  -1  1     36992  ultralytics.nn.modules.conv.Conv             [64, 64, 3, 2]                
+  6                  -1  1     26080  ultralytics.nn.modules.block.C3k2            [64, 128, 1, False, 0.25]     
+  7                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]              
+  8                  -1  1     87040  ultralytics.nn.modules.block.C3k2            [128, 128, 1, True]           
+  9                  -1  1    295424  ultralytics.nn.modules.conv.Conv             [128, 256, 3, 2]              
+ 10                  -1  1    346112  ultralytics.nn.modules.block.C3k2            [256, 256, 1, True]           
+ 11                   0  1         0  ultralytics.nn.modules.conv.SilenceChannel   [3, 4]                        
+ 12                  -1  1       176  ultralytics.nn.modules.conv.Conv             [1, 16, 3, 2]                 
+ 13                  -1  1      4672  ultralytics.nn.modules.conv.Conv             [16, 32, 3, 2]                
+ 14                  -1  1      6640  ultralytics.nn.modules.block.C3k2            [32, 64, 1, False, 0.25]      
+ 15                  -1  1     36992  ultralytics.nn.modules.conv.Conv             [64, 64, 3, 2]                
+ 16                  -1  1     26080  ultralytics.nn.modules.block.C3k2            [64, 128, 1, False, 0.25]     
+ 17                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]              
+ 18                  -1  1     87040  ultralytics.nn.modules.block.C3k2            [128, 128, 1, True]           
+ 19                  -1  1    295424  ultralytics.nn.modules.conv.Conv             [128, 256, 3, 2]              
+ 20                  -1  1    346112  ultralytics.nn.modules.block.C3k2            [256, 256, 1, True]           
+ 21             [6, 16]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 22             [8, 18]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 23            [10, 20]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 24                  -1  1    394240  ultralytics.nn.modules.block.SPPF            [512, 256, 5]                 
+ 25                  -1  1    249728  ultralytics.nn.modules.block.C2PSA           [256, 256, 1]                 
+ 26                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 27            [-1, 22]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 28                  -1  1    127680  ultralytics.nn.modules.block.C3k2            [512, 128, 1, False]          
+ 29                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 30            [-1, 21]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 31                  -1  1     40288  ultralytics.nn.modules.block.C3k2            [384, 64, 1, False]           
+ 32                  -1  1     36992  ultralytics.nn.modules.conv.Conv             [64, 64, 3, 2]                
+ 33            [-1, 28]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 34                  -1  1     86720  ultralytics.nn.modules.block.C3k2            [192, 128, 1, False]          
+ 35                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]              
+ 36            [-1, 25]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 37                  -1  1    378880  ultralytics.nn.modules.block.C3k2            [384, 256, 1, True]           
+ 38        [31, 34, 37]  1    430867  ultralytics.nn.modules.head.Detect           [1, [64, 128, 256]]           
+YOLO11n-RGBT-midfusion summary: 436 layers, 3,795,091 parameters, 3,795,075 gradients, 9.50 GFLOPs
+
+Freezing layer 'model.38.dfl.conv.weight'
+[34m[1mtrain: [0mNew cache created: /apps/jhinno/JHdata/spooler/24021211734/datasets/LLVIP/visible/train.cache
+[34m[1malbumentations: [0mBlur(p=0.01, blur_limit=(3, 7)), MedianBlur(p=0.01, blur_limit=(3, 7)), ToGray(p=0.01, num_output_channels=3, method='weighted_average'), CLAHE(p=0.01, clip_limit=(1.0, 4.0), tile_grid_size=(8, 8))
+[34m[1malbumentations: [0mBlur(p=0.01, blur_limit=(3, 7)), MedianBlur(p=0.01, blur_limit=(3, 7))
+Plotting labels to runs/LLVIP/LLVIP-yolo11n-RGBT-midfusion-5/labels.jpg... 
+[34m[1moptimizer:[0m SGD(lr=0.002, momentum=0.937) with parameter groups 112 weight(decay=0.0), 119 weight(decay=0.0005), 118 bias(decay=0.0)
+Image sizes 640 train, 640 val
+Using 2 dataloader workers
+Logging results to [1mruns/LLVIP/LLVIP-yolo11n-RGBT-midfusion-5[0m
+Starting training for 300 epochs...
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3463       8302    0.00694      0.869     0.0175    0.00493
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3463       8302     0.0978      0.169     0.0579     0.0149
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3463       8302      0.332      0.268      0.225     0.0821
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3463       8302      0.554      0.388      0.435      0.183
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3463       8302      0.364      0.309      0.288      0.133
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3463       8302      0.559      0.371      0.435      0.208
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3463       8302      0.671      0.536      0.617      0.312
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3463       8302      0.681      0.472      0.574      0.292
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3463       8302      0.693      0.508      0.609        0.3
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3463       8302      0.579      0.519      0.559      0.284
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3463       8302      0.542       0.43       0.46      0.224
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3463       8302      0.648      0.564      0.631      0.295
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3463       8302      0.614      0.549      0.614      0.316
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3463       8302       0.56      0.464      0.508       0.24
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3463       8302      0.703      0.675      0.729        0.4
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3463       8302        0.7      0.565      0.656      0.351
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3463       8302      0.624      0.514      0.578      0.286
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3463       8302       0.78      0.662      0.765      0.413
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3463       8302      0.781      0.646      0.748      0.383
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3463       8302      0.827      0.659      0.776      0.423
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3463       8302      0.763      0.685      0.768      0.409
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3463       8302      0.817      0.675       0.79      0.433
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3463       8302      0.802      0.664      0.778      0.428
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3463       8302      0.689      0.644      0.708      0.383
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size

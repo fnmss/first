@@ -1,0 +1,35 @@
+
+Sender: Unischeduler System <24021211734@login01>
+Subject: Job 1120037: <source /apps/software/anaconda3/etc/profile.d/conda.sh && conda activate YOLO && module load cuda/11.8 && export CUDA_VISIBLE_DEVICES=0 && echo CUDA_VISIBLE_DEVICES:  && python val.py> Done
+
+Job <source /apps/software/anaconda3/etc/profile.d/conda.sh && conda activate YOLO && module load cuda/11.8 && export CUDA_VISIBLE_DEVICES=0 && echo CUDA_VISIBLE_DEVICES:  && python val.py> was submitted from host <login01> by user <24021211734>.
+Job was executed on host(s) <1*gpu21>, in queue <gpu>, as user <24021211734>.
+</home/24021211734> was used as the home directory.
+</apps/jhinno/JHdata/spooler/24021211734/YOLOv11-RGBT> was used as the working directory.
+Started at 2025-11-04 15:04:05
+Results reported at 2025-11-04 15:06:25
+
+Your job looked like:
+
+------------------------------------------------------------
+# User input
+source /apps/software/anaconda3/etc/profile.d/conda.sh && conda activate YOLO && module load cuda/11.8 && export CUDA_VISIBLE_DEVICES=0 && echo CUDA_VISIBLE_DEVICES:  && python val.py
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time   :          155.75 sec.
+    Max Memory :             19272 MB
+    Max Processes  :              10
+
+
+The output (if any) follows:
+
+CUDA_VISIBLE_DEVICES:
+Ultralytics 8.3.75 🚀 Python-3.8.20 torch-2.2.0+cu118 CUDA:0 (Tesla P100-PCIE-16GB, 16281MiB)
+YOLO11n-RGBT-midfusion summary (fused): 324 layers, 3,784,883 parameters, 0 gradients, 9.30 GFLOPs
+                   all       3463       8302      0.966        0.9      0.963      0.638
+Speed: 0.2ms preprocess, 2.9ms inference, 0.0ms loss, 0.6ms postprocess per image
+Results saved to [1mruns/val/LLVIP/LLVIP_r20-yolov8n-no_pretrained[0m

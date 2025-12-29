@@ -5,7 +5,7 @@ from ultralytics import YOLO
 if __name__ == '__main__':
     model = YOLO('ultralytics/cfg/models/ppyoloe/ppyoloe-s.yaml')
     # model.load('yolov8n.pt') # loading pretrain weights
-    model.train(data=R'ultralytics/cfg/datasets/BCCD.yaml',
+    model.train(data=R'ultralytics/cfg/datasets/VEDAI.yaml',
                 cache=False,
                 imgsz=640,
                 epochs=10,
